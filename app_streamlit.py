@@ -4,13 +4,9 @@ from utils.utils import change_to_province
 from utils.preprocessing_model import preprocessor_fun
 
 df = pd.read_csv("Data8.csv", sep=",")
-X = df.drop("Price", axis=1)
-X = df.drop("PriceperMeter", axis=1)
-X = df.drop("Unnamed: 0", axis=1)
-columns = X.columns
-df_streamlit = pd.DataFrame(columns = columns)
-
-
+df = df.drop(["Price", "PriceperMeter", "Unnamed: 0"], axis=1)
+columns = df.columns
+#df_streamlit = pd.DataFrame(columns = columns)
 
 
 st.title("Welcome to the best house pricing predictor in Belgium")

@@ -1,9 +1,7 @@
 import pandas as pd
-import numpy as np
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.impute import SimpleImputer
-from sklearn.linear_model import LinearRegression
 from sklearn.compose import make_column_transformer
 from sklearn.model_selection import train_test_split
 import pickle
@@ -25,6 +23,11 @@ class ModellingData:
         self.fit_model()
 
     def load_file(self, file_name="./Data8.csv"):
+        """
+        load data drom csv and define x and y (price target)
+        :param file_name: name of the csv with data set ( Data8 if None)
+        :return: None
+        """
         self.df = pd.read_csv(file_name, sep=",")
         self.X = self.df.drop("Price", axis=1)
         self.y = self.df["Price"]
@@ -92,12 +95,18 @@ class ModellingData:
         """
         load model that have been saved by saved model
         :param model_file_name:
-        :return:
+        :return: None
         """
         loaded_model = pickle.load(open(model_file_name, "rb"))
         return loaded_model
 
     def prediction_saved_model(self, model_name, value):
+        """
+        predict price of a house with a saved model, for x parameter
+        :param model_name: name of the model saved
+        :param value: x feature on the same form than a X_train(df with same column)
+        :return: prediction of price with there parameter
+        """
         loaded_model = pickle.load(open(model_name, "rb"))
         return loaded_model.predict(value)
 
