@@ -6,7 +6,8 @@ df = pd.read_csv("Data8.csv")
 
 pd.set_option('display.max_colwidth', None)
 pd.set_option("display.max_columns", None)
-#sns.heatmap(df)
+sns.heatmap(df)
+plt.show()
 # dfhouse = pd.read_csv("DataHouse.csv")
 # dfapart = pd.read_csv("Dataapart.csv")
 
