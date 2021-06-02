@@ -33,12 +33,15 @@ class ModellingData:
         self.y = self.df["Price"]
 
     def make_pipeline(self):
-        self.numerical_features = ['Locality', 'Number of rooms', 'Area', 'Terrace Area', 'Garden Area', 'Surface of the land' ]
-        self.categorical_features = ['Type of property','Fully equipped kitchen', 'Furnished', 'Open fire','Number of facades',
-                               'Swimming pool', 'State of the building', 'Province', 'Region']
+        self.numerical_features = ['Locality', 'Number of rooms', 'Area', 'Terrace Area', 'Garden Area',
+                                   'Surface of the land']
+        self.categorical_features = [
+                                    'Type of property','Fully equipped kitchen', 'Furnished', 'Open fire',
+                                    'Number of facades','Swimming pool', 'State of the building', 'Province', 'Region'
+                                     ]
         self.numerical_pipeline = make_pipeline(SimpleImputer(), StandardScaler())
         self.categorical_pipeline = make_pipeline(SimpleImputer(strategy="most_frequent"),
-                                             OneHotEncoder())
+                                                  OneHotEncoder())
 
     def split_df(self):
         """
@@ -48,8 +51,7 @@ class ModellingData:
         self.X_train, self.X_test, self.y_train, self.y_test = \
             train_test_split(self.X, self.y, test_size=0.2, random_state=50)
 
-
-    def preprocessor(self,numerical_features,categorical_features):
+    def preprocessor(self, numerical_features, categorical_features):
         """
         normalize the data to be train into the ml model with the numerical pipeline(standard scaler)
         and our categorical pipeline (most frequent, one hot encoder)
@@ -58,7 +60,7 @@ class ModellingData:
         :return: preprocess data that ara normalized with a make_column_transformer
         """
         self.preprocessor = make_column_transformer((self.numerical_pipeline, numerical_features),
-                                               (self.categorical_pipeline, categorical_features))
+                                                    (self.categorical_pipeline, categorical_features))
         return self.preprocessor
 
     def model(self):
@@ -68,6 +70,7 @@ class ModellingData:
         """
         self.model = make_pipeline(self.preprocessor, XGBRegressor())
         return self.model
+
     def fit_model(self):
         """
         fit model with train data
@@ -89,7 +92,7 @@ class ModellingData:
         :param file_name: name to give to the file
         :return: None
         """
-        pickle.dump(self.model(), open(file_name, "wb"))
+        pickle.dump(self.model, open(file_name, "wb"))
 
     def load_model(self, model_file_name):
         """
@@ -109,17 +112,3 @@ class ModellingData:
         """
         loaded_model = pickle.load(open(model_name, "rb"))
         return loaded_model.predict(value)
-
-
-
-# save
-#pickle.dump(model, open(file_name, "wb"))
-
-
-# # load
-# xgb_model_loaded = pickle.load(open(file_name, "rb"))
-# print(xgb_model_loaded)
-# # test
-# ind = 1
-# test = X_val[ind]
-# xgb_model_loaded.predict(test)[0] == xgb_model.predict(test)[0]
