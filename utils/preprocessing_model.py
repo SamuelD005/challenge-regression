@@ -49,7 +49,7 @@ class ModellingData:
         :return: x and y train and test dataset
         """
         self.X_train, self.X_test, self.y_train, self.y_test = \
-            train_test_split(self.X, self.y, test_size=0.2, random_state=50)
+            train_test_split(self.X, self.y, test_size=0.2, random_state=42)
 
     def preprocessor(self, numerical_features, categorical_features):
         """
