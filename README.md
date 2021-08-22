@@ -205,13 +205,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ### Team Members
 Samuel Dodet - [@Linkedin](https://www.linkedin.com/in/samuel-dodet/) - samuel.dodet3@gmail.com
 
-Jeremy Lipszic - [@Linkedin](https://www.linkedin.com/in/jeremy-lipszyc/) - jeremylipszyc@gmail.com
 
-Yolann Sabaux - [@Linkedin](https://www.linkedin.com/in/samuel-dodet/) - samuel.dodet3@gmail.com
-
-Clement Hannecourt - [@Linkedin](https://www.linkedin.com/in/haenecour/) - cl.haenecour@gmail.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/SamuelDodet/Scrapping_RealEstate_Belgium)
+Project Link: [https://github.com/your_username/repo_name](https://https://github.com/SamuelDodet/Belgian_Houses_Price_Prediction)
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
