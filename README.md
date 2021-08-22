@@ -180,7 +180,7 @@ Model Score : 74%
 In terminal ''' steamlit run app_streamlit.py
 ''' to execute streamlit app visualisation
 
-![Logo](https://github.com/SamuelDodet/Belgian_Houses_Price_Prediction/blob/main/image/img.png)
+![Logo](https://github.com/SamuelDodet/Belgian_Houses_Price_Prediction/blob/main/images/img.png)
 
 
 
