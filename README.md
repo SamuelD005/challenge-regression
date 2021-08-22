@@ -187,7 +187,7 @@ In terminal ''' steamlit run app_streamlit.py
 <!-- ROADMAP -->
 ## Conclusion
 
-Great application to have an idea of the price of any house in Belgium based and as low features as possible
+Great application to have an idea of the price of any houses in Belgium based with the lowest features as possible.
 
 
 
