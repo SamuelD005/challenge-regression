@@ -10,7 +10,7 @@ del df['Price']
 columns = df.columns
 
 
-st.title("Welcome to an house pricing predictor in Belgium")
+st.title("Belgian Houses Price Prediction")
 st.markdown("Get the price of your house")
 
 st.header("Time to give us some information about your house")

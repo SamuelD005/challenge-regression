@@ -177,18 +177,17 @@ Model Score : 74%
 
 #### Streamlit
 
-In terminal ''' steamlit app_streamlit.py
+In terminal ''' steamlit run app_streamlit.py
 ''' to execute streamlit app visualisation
 
-
+![Logo](https://github.com/SamuelDodet/Belgian_Houses_Price_Prediction/blob/main/image/img.png)
 
 
 
 <!-- ROADMAP -->
 ## Conclusion
 
-The database generated is a good base to construct a model of price prediction or 
-to analyse the state of Belgian Market
+Great application to have an idea of the price of any house in Belgium based and as low features as possible
 
 
 
