@@ -22,7 +22,7 @@ class ModellingData:
         self.model()
         self.fit_model()
 
-    def load_file(self, file_name="./Data8.csv"):
+    def load_file(self, file_name="./Dataset.csv"):
         """
         load data drom csv and define x and y (price target)
         :param file_name: name of the csv with data set ( Data8 if None)

@@ -7,7 +7,7 @@ import plotly.io as pio
 pio.renderers.default = "browser"
 
 
-df = pd.read_csv("../Data8.csv")
+df = pd.read_csv("../Dataset.csv")
 
 x = df["Area"]
 y = df["Price"]
